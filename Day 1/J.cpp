@@ -27,7 +27,7 @@ signed main() {
         int a, b;
     cin >> a >> b;
     if (a == b)
-        cout << "Impossible\n";
+        cout << "impossible\n";
     else if (a > b)
         cout << "Luxor\n";
     else

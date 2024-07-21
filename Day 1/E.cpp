@@ -12,6 +12,7 @@
 #include <cmath>
 #include <bitset>
 #include <stack>
+#include<iomanip>
 #include <math.h>
 using namespace std;
 #define int long long
@@ -24,15 +25,36 @@ signed main() {
     // freopen("mex.in", "r", stdin);
    // freopen("mex.in", "r", stdout);
     SuperSafan
-        int a, b;
-    cin >> a>> b;
-    if (a == 0)
-        cout << "Silver" << endl;
-    else if (b == 0)
-        cout << "Gold" << endl;
-    else
-        cout<<"Alloy\n"
-
+        int n, m;
+    cin >> n >> m;
+    vector<vector<char>> a(n, vector<char>(m));
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            cin >> a[i][j];
+    int x1 = -1, y1 = -1, x2 = -1, y2 = -1;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (a[i][j] == '+') {
+                x1 = i; y1 = j;
+                break;
+            }
+        }
+        if (x1 != -1)
+            break;
+    }
+    for (int i = n - 1; i >= 0; i--) {
+        for (int j = m - 1; j >= 0; j--) {
+            if (a[i][j] == '+') {
+                x2 = i; y2 = j;
+                break;
+            }
+        }
+        if (x2 != -1)
+            break;
+    }
+    int x3 = x2 - x1 - 1;
+    int y3 = y2 - y1 - 1;
+    cout << x3 * y3 << endl;
 }
 /*
 1

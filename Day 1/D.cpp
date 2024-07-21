@@ -12,6 +12,7 @@
 #include <cmath>
 #include <bitset>
 #include <stack>
+#include<iomanip>
 #include <math.h>
 using namespace std;
 #define int long long
@@ -27,12 +28,12 @@ signed main() {
         int t;
     cin >> t;
     while (t--) {
-        long double r, n;
+        int r, n;
         cin >> r >> n;
-        long double x = (sqrt(2) - 1);
-        long double y = sqrt(2)+1;
-        long double z = (r * pow(x, n))/pow(y,n);
-        cout << z << endl;
+        double x = (sqrt(2) - 1);
+        double y = sqrt(2) + 1;
+        double z = (r * pow(x, n)) / pow(y, n);
+        cout <<setprecision(8) << z<< endl;
     }
 }
 /*

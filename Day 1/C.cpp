@@ -31,7 +31,7 @@ signed main() {
     else if (b == 0)
         cout << "Gold" << endl;
     else
-        cout<<"Alloy\n"
+        cout << "Alloy\n";
 
 }
 /*
